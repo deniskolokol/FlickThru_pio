@@ -29,7 +29,7 @@ import org.apache.mahout.sparkbindings.indexeddataset.IndexedDatasetSpark
 import org.joda.time.DateTime
 import org.json4s.JsonAST.JArray
 import org.json4s._
-import d.k.conversions.IndexedDatasetConversions
+import com.flickthru.conversions.IndexedDatasetConversions
 import org.elasticsearch.spark._
 import org.apache.spark.SparkContext
 
