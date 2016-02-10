@@ -51,7 +51,7 @@ echo "Importing data for integration test"
 ACCESS_KEY=`pio app show asos-urec1 | grep Key | cut -f 7 -d ' '`
 echo -n "Access key: "
 echo $ACCESS_KEY
-python work/import_sample.py --access $ACCESS_KEY --server 127.0.0.1:7070
+python work/import_sample.py -c $ACCESS_KEY -s 127.0.0.1:7070
 
 echo ""
 echo "Building and delpoying model"
