@@ -160,7 +160,7 @@ def main(filename, **kwargs):
         source = line.split(delimiter)
         success, result = extractor.extract_features(source, keys=keys)
         if not success:
-            print  >> sys.stderr, "[WARN] skipping line %d, error: %s" % (ln, result['error'])
+            print  >> sys.stderr, "[WARN] skipping line %d: %s" % (ln, result['error'])
             continue
 
         # create $set event on predioction.io server
