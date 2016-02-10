@@ -56,7 +56,7 @@ python work/import_sample.py --access $ACCESS_KEY --server $SRV data/sample.csv
 
 echo ""
 echo "Building and delpoying model"
-pio build --clean
+pio build
 pio train  -- --driver-memory 2g
 echo "Model will remain deployed after this test"
 nohup pio deploy > deploy.out &
