@@ -43,7 +43,7 @@ cp urec1-engine.json engine.json
 
 echo ""
 echo "Cleaning asos_urec1 app data"
-pio app data-delete asos_urec1
+YES | pio app data-delete asos_urec1
 
 echo ""
 echo "Importing data for integration test"
@@ -52,7 +52,7 @@ SRV=127.0.0.1:7070
 ACCESS_KEY=`pio app show asos_urec1 | grep Key | cut -f 7 -d ' '`
 echo -n "Access key: "
 echo $ACCESS_KEY
-python work/import_sample.py --access $ACCESS_KEY --server $SRV
+python work/import_sample.py --access $ACCESS_KEY --server $SRV data/sample.csv
 
 echo ""
 echo "Building and delpoying model"
