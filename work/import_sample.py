@@ -199,15 +199,6 @@ def main(filename, **kwargs):
         f.write(','.join(line) + '\n')
     f.close()
 
-    # # train & deploy
-    # commands = ['pio train', 'pio deploy']
-    # for command in commands:
-    #     args = command.split(' ')
-    #     status = subprocess.check_call(args)
-    #     if status != 0:
-    #         print  >> sys.stderr, "[ERROR] Command '%s' returned non-zero exit status %s" % (command, status)
-    #         return
-
 
 if __name__ == '__main__':
     parser = OptionParser(usage="usage: python %prog [OPTIONS] resource_filename")
