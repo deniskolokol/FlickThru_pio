@@ -42,8 +42,8 @@ echo "Moving handmade-engine.json to engine.json for integration test."
 cp urec1-engine.json engine.json
 
 echo ""
-echo "Deleting asos-urec1 app data since the test is date dependent"
-pio app data-delete asos-urec1
+echo "Cleaning asos-urec1 app data"
+pio app data-delete asos_urec1
 
 echo ""
 echo "Importing data for integration test"
