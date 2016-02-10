@@ -43,11 +43,11 @@ cp urec1-engine.json engine.json
 
 echo ""
 echo "Cleaning asos_urec1 app data"
-YES | pio app data-delete asos_urec1
+yes YES | pio app data-delete asos_urec1
 
 echo ""
 echo "Importing data for integration test"
-SRV=127.0.0.1:7070
+SRV='127.0.0.1:7070'
 # get the access_key from pio app list
 ACCESS_KEY=`pio app show asos_urec1 | grep Key | cut -f 7 -d ' '`
 echo -n "Access key: "
