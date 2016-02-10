@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package d.k
+package com.flickthru
 
 import _root_.io.prediction.controller.PDataSource
 import _root_.io.prediction.controller.EmptyEvaluationInfo

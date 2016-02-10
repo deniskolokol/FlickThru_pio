@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package d.k
+package com.flickthru
 
 import io.prediction.controller.PPreparator
 import io.prediction.data.storage.PropertyMap

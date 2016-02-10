@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package d.k
+package com.flickthru
 
 import grizzled.slf4j.Logger
 import io.prediction.data.storage.Event
