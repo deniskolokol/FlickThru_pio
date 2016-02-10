@@ -52,7 +52,7 @@ SRV='127.0.0.1:7070'
 ACCESS_KEY=`pio app show asos-urec1 | grep Key | cut -f 7 -d ' '`
 echo -n "Access key: "
 echo $ACCESS_KEY
-python work/import_sample.py --access_key $ACCESS_KEY --server $SRV
+python work/import_sample.py --access $ACCESS_KEY --server $SRV
 
 echo ""
 echo "Building and delpoying model"
