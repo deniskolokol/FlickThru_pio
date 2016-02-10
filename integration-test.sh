@@ -65,7 +65,8 @@ sleep 20
 
 echo ""
 echo "Running test query."
-./work/query.sh > test.out
+# ./work/query.sh > test.out
+./work/query.sh
 
 echo ""
 echo "Restoring engine.json"
