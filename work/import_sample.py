@@ -72,6 +72,7 @@ class FeatureExtractor():
 
 class EventHandler(object):
     def __init__(self, access_key, event_server_uri):
+        print '(%s) %s; (%s) %s' % (type(access_key), access_key, type(event_server_uri), event_server_uri)
         self.client = predictionio.EventClient(access_key, event_server_uri)
         self.exporter = None
         self.filename = None
