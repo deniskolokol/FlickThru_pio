@@ -42,16 +42,17 @@ echo "Moving handmade-engine.json to engine.json for integration test."
 cp urec1-engine.json engine.json
 
 echo ""
-echo "Cleaning asos-urec1 app data"
+echo "Cleaning asos_urec1 app data"
 pio app data-delete asos_urec1
 
 echo ""
 echo "Importing data for integration test"
+SRV=127.0.0.1:7070
 # get the access_key from pio app list
-ACCESS_KEY=`pio app show asos-urec1 | grep Key | cut -f 7 -d ' '`
+ACCESS_KEY=`pio app show asos_urec1 | grep Key | cut -f 7 -d ' '`
 echo -n "Access key: "
 echo $ACCESS_KEY
-python work/import_sample.py -c $ACCESS_KEY -s 127.0.0.1:7070
+python work/import_sample.py --access $ACCESS_KEY --server $SRV
 
 echo ""
 echo "Building and delpoying model"
