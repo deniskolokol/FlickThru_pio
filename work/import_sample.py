@@ -71,7 +71,7 @@ class FeatureExtractor():
 
 
 class EventHandler(object):
-    def __init__(self, event_server_uri, access_key):
+    def __init__(self, access_key, event_server_uri):
         self.client = predictionio.EventClient(access_key, event_server_uri)
         self.exporter = None
         self.filename = None
@@ -135,7 +135,7 @@ def main(filename, **kwargs):
     event_server_uri = kwargs['event_server_uri']
     access_key = kwargs['access_key']
 
-    handler = EventHandler(event_server_uri, access_key)
+    handler = EventHandler(access_key, event_server_uri)
     if clean:
         handler.delete_events()
     if export_json:

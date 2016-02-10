@@ -47,12 +47,12 @@ pio app data-delete asos-urec1
 
 echo ""
 echo "Importing data for integration test"
+SRV='128.199.157.253'
 # get the access_key from pio app list
-# XXX: fixit -get the ip from `pio app show`
 ACCESS_KEY=`pio app show asos-urec1 | grep Key | cut -f 7 -d ' '`
 echo -n "Access key: "
 echo $ACCESS_KEY
-python work/import_sample.py --access_key $ACCESS_KEY
+python work/import_sample.py --access_key $ACCESS_KEY --server $SRV
 
 echo ""
 echo "Building and delpoying model"
