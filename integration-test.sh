@@ -20,10 +20,10 @@ if [ -f user-engine.json ]; then
     exit 1
 fi
 
-if [ ! -f data/integration-test-expected.txt ]; then
-    echo "File not found: data/integration-test-expected.txt"
-    exit 1
-fi
+# if [ ! -f data/integration-test-expected.txt ]; then
+#     echo "File not found: data/integration-test-expected.txt"
+#     exit 1
+# fi
 
 echo ""
 echo "Checking status, should exit if pio is not running."
