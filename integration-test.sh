@@ -64,9 +64,8 @@ echo "Waiting 20 seconds for the server to start"
 sleep 20
 
 echo ""
-echo "Running test query."
+echo "Running test query, saving results to test.out."
 work/query.sh > test.out
-echo "See results in test.out"
 
 echo ""
 echo "Restoring engine.json"

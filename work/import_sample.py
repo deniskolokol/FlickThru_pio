@@ -167,18 +167,18 @@ def main(filename, **kwargs):
         item_id = result.pop('iid')
         item_descr = result.pop('description')
         entity_id = "%s (%s)" % (item_descr, item_id)
+        handler_method(event='$set',
+                       entity_type='item',
+                       entity_id=entity_id,
+                       properties=result,
+                       **kwargs)
         for key, val in result.items():
-            handler_method(event='$set',
-                           entity_type='item',
-                           entity_id=entity_id,
-                           properties={key: val},
-                           **kwargs)
             props.append([str(entity_id), '$set', "%s:%s" % (key, val)])
 
-        # flip a coin to create user's event (purchase | view)
+        # flip a coin to create user's event (like | dislike)
         if random.random() > .5:
             user = users[random.randint(0, len(users)-1)] # random user
-            event = 'view' if random.random() > .5 else 'purchase' # coin for event
+            event = 'like' if random.random() > .5 else 'dislike' # coin for event
             handler_method(event=event,
                            entity_type='user',
                            entity_id=user,
