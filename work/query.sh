@@ -21,6 +21,16 @@ curl -H "Content-Type: application/json" -d '
 }' http://localhost:8000/queries.json
 echo ""
 
+echo ""
+echo "Recommendations for usr9 with negative bias"
+echo ""
+curl -H "Content-Type: application/json" -d '
+{
+    "user": "usr9",
+    "event": "dislike",
+    "bias": -1
+}' http://localhost:8000/queries.json
+echo ""
 
 echo ""
 echo "============ simple similar item recs ============"
