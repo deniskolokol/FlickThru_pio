@@ -6,7 +6,7 @@
         "params" : {
             "name": "sample.txt",
             "appName": "asos_urec1",
-            "eventNames": ["purchase", "view"]
+            "eventNames": ["like", "dislike"]
         }
     },
     "sparkConf": {
@@ -25,7 +25,7 @@
                 "appName": "asos_urec1",
                 "indexName": "urindex",
                 "typeName": "items",
-                "eventNames": ["purchase", "view"],
+                "eventNames": ["like", "dislike"],
                 "comment": "this will overwrite any existing popularity model, default is *popular* so add this to engine.json if you want *hot* to be always refreshed during train",
                 "recsModel": "backfill",
                 "backfillField": {
